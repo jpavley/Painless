@@ -3,4 +3,9 @@
 
 # Example 1
 # Printing a message to the terminal
-print("Hello, World!")
+
+def main():
+    print("Hello, World!")
+
+if __name__ == "__main__":
+    main()
