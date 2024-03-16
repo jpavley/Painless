@@ -14,6 +14,7 @@ def helloFString():
     name = "Paul"
     print(f"Hello, {name}!")
 
+# What is a string?
 # What is a f-string?
 # What do the curly braces do?
 # How many arguments are passed to the print function?
