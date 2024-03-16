@@ -7,12 +7,13 @@ def main():
     hello3()
     message()
     
+# One problems with example 1 is that the message is "hard coded"...
 
 # Example 2.1
 # Printing a message to the terminal using a variable
 def hello1():
-    name = "John"
-    print("Hello, " + name + "!")
+    name = "John" # Define a variable called "name" and assign it the value "John"
+    print("Hello,", name, "!") # use the variable as one of the arugments passed to the print function
 
 # Example 2.2
 # Printing a message to the terminal using a variable and the f-string method
