@@ -4,8 +4,9 @@
 # Example 1
 # Printing a message to the terminal
 
+# Minimum viable Python program
 def main():
-    print("Hello, World!")
+    print("Hello, World!") # Print a message to the terminal
 
 if __name__ == "__main__":
-    main()
+    main() # Call the main function when the script is run
