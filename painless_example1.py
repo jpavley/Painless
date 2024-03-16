@@ -5,7 +5,7 @@
 # Printing a message to the terminal
 
 # Minimum viable Python program
-def main():
+def main(): # Define a function called main
     print("Hello, World!") # Print a message to the terminal
 
 if __name__ == "__main__": # if run, run it as a script, else just load it as a module
