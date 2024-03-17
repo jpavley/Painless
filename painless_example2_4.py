@@ -16,11 +16,11 @@ def message(greeting, name):
 # the rest of our code.
     
 # What else can we do with the with our message function?
-# - Reuse the message function in another script?
-# - Get input from the user?
-# - Change the greeting based on the time of day?
-# - Print to a file?
-# - Can we find a better way to "print" to the terminal and to files?
+# - Reuse the message function in another script
+# - Get input from the user
+# - Change the greeting based on the time of day
+# - Print to a file
+# - Can we find a better way to "print" to the terminal and to files
     
 if __name__ == "__main__":
     main()
