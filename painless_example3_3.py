@@ -1,29 +1,29 @@
 # Painless Python
 # A ridiculously deep dive into the the print function
+import datetime as dt # Import the datetime module so we can tell time
 import painless_example2_4 as pe2
 
 # Example 3.2
-# Get input from the user
+# Change the greeting based on the time of day
 
 def main():
-    greeting = input("What is your greeting? ")
-    name = input("What is the name of the greeted? ")
-    pe2.message(greeting=greeting, name=name)
+    # This is a conditional statement: if something is true do this, else do that
+    if dt.datetime.now().hour < 12:
+        greeting = "Good morning"
+    else:
+        greeting = "Good afternoon"
+    pe2.message(greeting=greeting, name="Aida")
 
-# One thing that always confused me is that arugments can have the same name as parameters
+# This logic is a little hard to test...
+# We have to wait until the morning or afternoon to see if it works
+# How could we fix that?
 
 if __name__ == "__main__":
     main()
     
-
-name = input("What is your name? ")
-pe2.message(greeting="Hi there my friend", name=name)
-#print("Hello, " + name + "!")
-
-# Example 3.2
-# Printing a message to the terminal using the input function and concatenation
-print("Hello, " + input("What is your middle name? ") + "!")
-
-# Example 3.3
-# Printing a message to the a file using the input function
-print("Hello, " + input("What is your last name? ") + "!", file=open("output.txt", "a"))
+# Message function checklist:
+# x Reuse the message function in another script
+# x Get input from the user
+# x Change the greeting based on the time of day
+# - Print to a file
+# - Can we find a better way to "print" to the terminal and to files
