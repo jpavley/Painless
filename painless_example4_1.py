@@ -17,10 +17,10 @@
 # - Figure out how to merge the data in in the spreadsheet with the chart using Python.
 # - Figure out how to automate the process of creating the chart and the markdown file on a monthly basis.
 
-# Example 4
+# Example 4.1
 # Figure out how to create a markdown file that contains a chart.
 
-fileName = "painless_example4.md" # the name of the markdown file
+fileName = "painless_example4_1.md" # the name of the markdown file
 title = "American Presidents Birthday Briefing" # the title of the chart
 
 column = ["Name", "Birth Date", "Fun Fact"] # the titles of the columns
