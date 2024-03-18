@@ -20,7 +20,7 @@
 # Example 4
 # Figure out how to create a markdown file that contains a chart.
 
-fileName = "monthly_pres_bday_briefing.md" # the name of the markdown file
+fileName = "painless_example4.md" # the name of the markdown file
 title = "American Presidents Birthday Briefing" # the title of the chart
 
 column = ["Name", "Birth Date", "Fun Fact"] # the titles of the columns
