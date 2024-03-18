@@ -4,7 +4,7 @@
 def main():
     message(greeting ="Yo", name="Ringo")
     
-# Example 2.3 is much less hard coded than before for still contains hard coding.
+# Example 2.3 is much less hard coded than before but it still contains some hard coding.
 
 # Example 2.4
 # Printing a message to the terminal using two variables inside an f-string

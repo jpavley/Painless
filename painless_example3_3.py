@@ -3,8 +3,8 @@
 import datetime as dt # Import the datetime module so we can tell time
 import painless_example2_4 as pe2
 
-# Example 3.2
-# Change the greeting based on the time of day
+# Example 3.3
+# Change the greeting based on the time of day.
 
 def main():
     # This is a conditional statement: if something is true do this, else do that
@@ -26,4 +26,3 @@ if __name__ == "__main__":
 # x Get input from the user
 # x Change the greeting based on the time of day
 # - Print to a file
-# - Can we find a better way to "print" to the terminal and to files

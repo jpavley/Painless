@@ -1,10 +1,44 @@
 # Painless Python
 # A ridiculously deep dive into the the print function
 
-# example 4
-# Printing messages to a file using the Markdown format to build a table
-print("# Pets and Food\n", file=open("output.md", "a"))
-print("| Feline", "Canine", "Rodent |", sep=" | ", file=open("output.md", "a"))
-print("| --- | --- | --- |", file=open("output.md", "a"))
-print("| Cat", "Dog", "Mouse |", sep=" | ", file=open("output.md", "a"))
-print("| Meowmix", "Alpo", "Cheese |\n", sep=" | ", file=open("output.md", "a"))
+# Let's pretend we have a problem to solve!
+
+# Let's say that every month we have to grab data from a spreadsheet 
+# and create a table that presents that data in a chart.
+# This table is called the monthly presidential brithday briefing.
+# We also have include a fun fact about each president.
+ 
+# How can our limited knowlege of Python help us automate this this 
+# exciting and mission critical task?
+
+# Here's our todo list:
+# - Figure out how to create a markdown file that contains a chart.
+# - Figure out how to grab data for particular month from a spreadsheet.
+# - Figure out how to merge the data in in the spreadsheet with the chart using Python.
+# - Figure out how to automate the process of creating the chart and the markdown file on a monthly basis.
+
+# Example 4
+# Figure out how to create a markdown file that contains a chart.
+
+fileName = "monthly_pres_bday_briefing.md" # the name of the markdown file
+title = "American Presidents Birthday Briefing" # the title of the chart
+
+column = ["Name", "Birth Date", "Fun Fact"] # the titles of the columns
+
+# Sample data for the chart
+row1 = ["George Washington", "Feb 22, 1732", "Height: 6'2\", 1/2 inch shorter than Jefferson"]
+row2 = ["John Adams", "Oct 30, 1735", "Weight: 165 lbs, 10 lbs less than than Washington"]
+row3 = ["Thomas Jefferson", "Apr 13, 1743", "Died on the same day as John Adams, July 4, 1826"]
+
+# Output the chart title to the markdown file
+print(f"# {title}\n", file=open(fileName, "a"))
+
+# Output the column titles to the markdown file
+print(f"| {column[0]}", f"{column[1]}", f"{column[2]} |", sep=" | ", file=open(fileName, "a"))
+
+# Output column formatting to the markdown file
+print("| --- | --- | --- |", file=open(fileName, "a"))
+
+# For each row in the sample data, output that row's data to the markdown file
+for row in [row1, row2, row3]:
+    print(f"| {row[0]}", f"{row[1]}", f"{row[2]} |", sep=" | ", file=open(fileName, "a"))

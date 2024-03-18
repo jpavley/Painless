@@ -4,7 +4,7 @@ import datetime as dt # Import the datetime module so we can tell time
 # import painless_example2_4 as pe2
 
 # Example 3.4
-# Print to a file
+# Print to a file.
 def message(greeting, name, fileName):
     if fileName:
         file = open(fileName, "a")
@@ -13,7 +13,7 @@ def message(greeting, name, fileName):
         print(f"{greeting}, {name}!")
 
 def main():
-    # This is a conditional statement: if something is true do this, else do that
+    # This is a conditional statement: if something is true do this, else do that.
     if dt.datetime.now().hour < 12:
         greeting = "Good morning"
     else:
@@ -22,7 +22,7 @@ def main():
     message(greeting=greeting, name="Aida", fileName="painless_example3_4.txt")
 
 # What is a file?
-# What happens if fileName is ""?
+# What happens if fileName is " "?
 # Does the open function do?
 # What does the "a" mean?
 

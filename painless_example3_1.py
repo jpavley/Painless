@@ -4,7 +4,7 @@
 # Example 3.1
 # Reuse the message function in another script
 
-# loead the painless_example2_4.py script as a module
+# Load the painless_example2_4.py script as a module
 # (not running it, just loading it)
 import painless_example2_4 as pe2
 
@@ -20,4 +20,3 @@ if __name__ == "__main__":
 # - Get input from the user
 # - Change the greeting based on the time of day
 # - Print to a file
-# - Can we find a better way to "print" to the terminal and to files

@@ -8,6 +8,8 @@ def main():
 # Hard coding is the process of embedding data into the source code of a script.
 # (Yech!)
 
+# Let's see if we can make it less hard coded.
+
 # Example 2.1
 # Printing a message to the terminal using a variable
 def helloVariable():

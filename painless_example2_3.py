@@ -7,6 +7,8 @@ def main():
 # Example 2.2 solved the extra space and the number of arguments problems.
 # But we still have the hard coding problem.
 
+# Let's see if we can make it even less hard coded.
+
 # Example 2.3
 # Printing a message to the terminal using a argument
 def helloArgument(name):

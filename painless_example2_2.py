@@ -8,6 +8,9 @@ def main():
 # But now we have this extra space between the name and the exclamation point.
 # Another problem is that we might run out of arguments to pass to the print function.
 
+# Is there a way to include the values of many variables in a single string?
+# (The official term for what we are trying to do is a "string interpolation")
+
 # Example 2.2
 # Printing a message to the terminal using a variable and the f-string method
 def helloFString():
