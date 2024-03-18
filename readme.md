@@ -12,6 +12,11 @@
 - John Pavley, head of product & engineering for News Corp
 - This is how I learned to code, 35 years ago
 
-### Note
+## Notes
 
-This document is written in Markdown. This fact will become important later on in the talk.
+- This document is written in markdown and the examples use markdown as well. <https://www.markdownguide.org/getting-started/>
+- The examples use a CSV file from Kaggle: <https://www.kaggle.com/datasets/zsinghrahulk/us-presidents-age-state-health-and-wealth?resource=download>
+- My preferred IDE (Integrated Development Environment) is Visual Studio Code. It's free and better that most of the commerical IDEs. <https://code.visualstudio.com>
+- There are hundreds of Python resources online. I recommend you start with Python.org. <https://www.python.org>
+
+
