@@ -15,25 +15,17 @@ def main():
 
 def getPresidents():
     import datetime
-
+ 
     # Get the current month
     currentMonth = datetime.datetime.now().month
 
     fileName = "US-Presidents.csv"
     df = pd.read_csv(fileName)
-    df['Born'] = df['Born'].apply(cleanDate)
-    df['Born'] = df['Born'].apply(parse_dates)
-    #df['Born'] = pd.to_datetime(df['Born'], errors='coerce')
-    #print(df['Born'])
+    df['Born'] = df['Born'].apply(cleanDate) # Remove characters in square brackets using regular expressions
+    df['Born'] = df['Born'].apply(parse_dates) # Convert the date strings into datetime objects
 
-    #bday1 = df.iloc[0,2] # iloc[row, column]
-    #bday1 = pd.to_datetime(bday1)
-    #bday1 = bday1.month
-    #print(bday1, type(bday1))
-
-    for i in range(1, 13):
-        names = get_names_in_range(df, i, i)
-        print(i, names)
+    data = get_data_in_range(df, currentMonth, currentMonth)  # Get data of people born in January, February, or March
+    print(data)
 
 def cleanDate(dateString):
     # Remove characters in square brackets using regular expressions
@@ -68,6 +60,13 @@ def get_names_in_range(df, start_month, end_month):
     # Get the names of the people who were born within the specified range
     names = df.loc[mask, 'President'].tolist()
     return names
+
+def get_data_in_range(df, start_month, end_month):
+    # Filter the DataFrame to include only rows where the month of the 'Born' column is within the specified range
+    mask = df['Born'].dt.month.between(start_month, end_month)
+    # Get the data of the people who were born within the specified range
+    data = df.loc[mask, ['President', 'Born', 'Height (ft)', 'Weight (lbs)']]
+    return data.values
 
 if __name__ == "__main__":
     main()
