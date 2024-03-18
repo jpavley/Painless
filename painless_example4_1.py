@@ -20,25 +20,32 @@
 # Example 4.1
 # Figure out how to create a markdown file that contains a chart.
 
-fileName = "painless_example4_1.md" # the name of the markdown file
-title = "American Presidents Birthday Briefing" # the title of the chart
+def main():
+    generateChart()
 
-column = ["Name", "Birth Date", "Fun Fact"] # the titles of the columns
+def generateChart():
+    fileName = "painless_example4_1.md" # the name of the markdown file
+    title = "American Presidents Birthday Briefing" # the title of the chart
 
-# Sample data for the chart
-row1 = ["George Washington", "Feb 22, 1732", "Height: 6'2\", 1/2 inch shorter than Jefferson"]
-row2 = ["John Adams", "Oct 30, 1735", "Weight: 165 lbs, 10 lbs less than than Washington"]
-row3 = ["Thomas Jefferson", "Apr 13, 1743", "Died on the same day as John Adams, July 4, 1826"]
+    column = ["Name", "Birth Date", "Fun Fact"] # the titles of the columns
 
-# Output the chart title to the markdown file
-print(f"# {title}\n", file=open(fileName, "a"))
+    # Sample data for the chart
+    row1 = ["George Washington", "Feb 22, 1732", "Height: 6'2\", 1/2 inch shorter than Jefferson"]
+    row2 = ["John Adams", "Oct 30, 1735", "Weight: 165 lbs, 10 lbs less than than Washington"]
+    row3 = ["Thomas Jefferson", "Apr 13, 1743", "Died on the same day as John Adams, July 4, 1826"]
 
-# Output the column titles to the markdown file
-print(f"| {column[0]} | {column[1]} | {column[2]} |", file=open(fileName, "a"))
+    # Output the chart title to the markdown file
+    print(f"# {title}\n", file=open(fileName, "a"))
 
-# Output column formatting to the markdown file
-print("| --- | --- | --- |", file=open(fileName, "a"))
+    # Output the column titles to the markdown file
+    print(f"| {column[0]} | {column[1]} | {column[2]} |", file=open(fileName, "a"))
 
-# For each row in the sample data, output that row's data to the markdown file
-for row in [row1, row2, row3]:
-    print(f"| {row[0]} | {row[1]} | {row[2]} |", file=open(fileName, "a"))
+    # Output column formatting to the markdown file
+    print("| --- | --- | --- |", file=open(fileName, "a"))
+
+    # For each row in the sample data, output that row's data to the markdown file
+    for row in [row1, row2, row3]:
+        print(f"| {row[0]} | {row[1]} | {row[2]} |", file=open(fileName, "a"))
+
+if __name__ == "__main__":
+    main()
