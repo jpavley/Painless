@@ -34,11 +34,11 @@ row3 = ["Thomas Jefferson", "Apr 13, 1743", "Died on the same day as John Adams,
 print(f"# {title}\n", file=open(fileName, "a"))
 
 # Output the column titles to the markdown file
-print(f"| {column[0]}", f"{column[1]}", f"{column[2]} |", sep=" | ", file=open(fileName, "a"))
+print(f"| {column[0]} | {column[1]} | {column[2]} |", file=open(fileName, "a"))
 
 # Output column formatting to the markdown file
 print("| --- | --- | --- |", file=open(fileName, "a"))
 
 # For each row in the sample data, output that row's data to the markdown file
 for row in [row1, row2, row3]:
-    print(f"| {row[0]}", f"{row[1]}", f"{row[2]} |", sep=" | ", file=open(fileName, "a"))
+    print(f"| {row[0]} | {row[1]} | {row[2]} |", file=open(fileName, "a"))
