@@ -25,7 +25,14 @@ def getPresidents():
     df['Born'] = df['Born'].apply(parse_dates) # Convert the date strings into datetime objects
 
     data = get_data_in_range(df, currentMonth, currentMonth)  # Get data of people born in January, February, or March
-    print(data)
+
+    president_names = data[:,0]
+    president_birthdays = data[:,1]
+    president_heights = data[:,2]
+    president_weights = data[:,3]
+
+    for i in range(len(president_names)):
+        print(f"{president_names[i]} was born on {president_birthdays[i].strftime('%B %d, %Y')}. He weighed {president_weights[i]} lbs. and was {president_heights[i]} ft. tall.")
 
 def cleanDate(dateString):
     # Remove characters in square brackets using regular expressions
@@ -62,6 +69,8 @@ def get_names_in_range(df, start_month, end_month):
     return names
 
 def get_data_in_range(df, start_month, end_month):
+    # Drop duplicate rows
+    df = df.drop_duplicates(subset='President')
     # Filter the DataFrame to include only rows where the month of the 'Born' column is within the specified range
     mask = df['Born'].dt.month.between(start_month, end_month)
     # Get the data of the people who were born within the specified range
