@@ -21,6 +21,7 @@ def main():
     message(greeting=greeting, name="Aida", fileName=None)
     message(greeting=greeting, name="Aida", fileName="painless_example3_4.txt")
 
+# What is a file?
 # What happens if fileName is ""?
 # Does the open function do?
 # What does the "a" mean?
@@ -33,4 +34,6 @@ if __name__ == "__main__":
 # x Get input from the user
 # x Change the greeting based on the time of day
 # x Print to a file
-# - Can we find a better way to "print" to the terminal and to files
+
+# Now it feels like have some real tools in our tookit!
+# Let's do something serious with our message function!
