@@ -50,7 +50,7 @@ def generateChart():
 if __name__ == "__main__":
     main()
 
-# Here's our monthly presidential brithday briefing todo list:
+# Monthly presidential brithday briefing todo list:
 # x Figure out how to create a markdown file that contains a chart.
 # - Figure out how to grab data for particular month from a spreadsheet.
 # - Figure out how to merge the data in in the spreadsheet with the chart using Python.
