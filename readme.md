@@ -17,5 +17,6 @@
 
 - This document is written in markdown and the examples use markdown as well. <https://www.markdownguide.org/getting-started/>
 - The examples use a CSV file from Kaggle: <https://www.kaggle.com/datasets/zsinghrahulk/us-presidents-age-state-health-and-wealth?resource=download>
-- My preferred IDE (Integrated Development Environment) is Visual Studio Code. It's free and better that most of the commerical IDEs. <https://code.visualstudio.com>
+- My preferred IDE (Integrated Development Environment) is Visual Studio Code. It's free and better than most other IDEs. <https://code.visualstudio.com>
+- If you're going work with data you need the Pandas library. <https://pandas.pydata.org>
 - There are hundreds of Python resources online. I recommend you start with Python.org. <https://www.python.org>
