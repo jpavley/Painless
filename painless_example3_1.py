@@ -6,11 +6,18 @@
 
 # Load the painless_example2_4.py script as a module
 # (not running it, just loading it)
-import painless_example2_4 as pe2
+
+import painless_example2_4 as pe2 # Load the message script with an easy name
 
 def main():
     pe2.message(greeting="Hail elf friend", name="Frodo")
     pe2.message(greeting="You shall not pass", name="Balrog")
+
+# We reached inside the pe2 script (aka painless_example2_4.py) to call the
+# message script
+
+# In Python the pe2 script has become a module which can be used by any other
+# script
 
 if __name__ == "__main__":
     main()
