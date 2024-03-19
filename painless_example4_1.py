@@ -21,9 +21,9 @@
 # Figure out how to create a markdown file that contains a chart.
 
 def main():
-    generateChart()
+    generate_chart()
 
-def generateChart():
+def generate_chart():
     fileName = "painless_example4_1.md" # the name of the markdown file
     title = "American Presidents Birthday Briefing" # the title of the chart
 

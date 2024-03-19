@@ -2,7 +2,7 @@
 # A ridiculously deep dive into the the print function
 
 def main():
-    helloArgument(name="George")
+    hello_argument(name="George")
     
 # Example 2.2 solved the extra space and the number of arguments problems.
 # But we still have the hard coding problem.
@@ -11,7 +11,7 @@ def main():
 
 # Example 2.3
 # Printing a message to the terminal using a argument
-def helloArgument(name):
+def hello_argument(name):
     print(f"Hello, {name}!")
 
 # Where did the value of the variable "name" come from?

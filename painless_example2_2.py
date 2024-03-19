@@ -2,7 +2,7 @@
 # A ridiculously deep dive into the the print function
 
 def main():
-    helloFString()
+    hello_fstring()
     
 # Example 2.1 kinda sovled hard coding problem.
 # But now we have this extra space between the name and the exclamation point.
@@ -13,7 +13,7 @@ def main():
 
 # Example 2.2
 # Printing a message to the terminal using a variable and the f-string method
-def helloFString():
+def hello_fstring():
     name = "Paul"
     print(f"Hello, {name}!")
 
