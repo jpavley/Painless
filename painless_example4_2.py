@@ -34,9 +34,9 @@ def get_presidents():
     for i in range(len(president_names)):
         print(f"{president_names[i]} was born on {president_birthdays[i].strftime('%B %d, %Y')}. He weighed {president_weights[i]} lbs and was {president_heights[i]} ft. tall.")
 
-def clean_date(dateString):
+def clean_date(date_string):
     # Remove characters in square brackets using regular expressions
-    cleanedDate = re.sub(r"\[.*\]", "", dateString)
+    cleanedDate = re.sub(r"\[.*\]", "", date_string)
     return cleanedDate
 
 def parse_dates(date):

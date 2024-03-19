@@ -5,9 +5,9 @@ import datetime as dt # Import the datetime module so we can tell time
 
 # Example 3.4
 # Print to a file.
-def message(greeting, name, fileName):
-    if fileName:
-        file = open(fileName, "a")
+def message(greeting, name, file_name):
+    if file_name:
+        file = open(file_name, "a")
         print(f"{greeting}, {name}!", file=file)
     else:
         print(f"{greeting}, {name}!")
@@ -18,8 +18,8 @@ def main():
         greeting = "Good morning"
     else:
         greeting = "Good afternoon"
-    message(greeting=greeting, name="Aida", fileName=None)
-    message(greeting=greeting, name="Aida", fileName="painless_example3_4.txt")
+    message(greeting=greeting, name="Aida", file_name=None)
+    message(greeting=greeting, name="Aida", file_name="painless_example3_4.txt")
 
 # What is a file?
 # What happens if fileName is " "?

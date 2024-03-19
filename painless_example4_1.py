@@ -24,7 +24,7 @@ def main():
     generate_chart()
 
 def generate_chart():
-    fileName = "painless_example4_1.md" # the name of the markdown file
+    file_name = "painless_example4_1.md" # the name of the markdown file
     title = "American Presidents Birthday Briefing" # the title of the chart
 
     column = ["Name", "Birth Date", "Fun Fact"] # the titles of the columns
@@ -35,17 +35,17 @@ def generate_chart():
     row3 = ["Thomas Jefferson", "Apr 13, 1743", "Died on the same day as John Adams, July 4, 1826"]
 
     # Output the chart title to the markdown file
-    print(f"# {title}\n", file=open(fileName, "a"))
+    print(f"# {title}\n", file=open(file_name, "a"))
 
     # Output the column titles to the markdown file
-    print(f"| {column[0]} | {column[1]} | {column[2]} |", file=open(fileName, "a"))
+    print(f"| {column[0]} | {column[1]} | {column[2]} |", file=open(file_name, "a"))
 
     # Output column formatting to the markdown file
-    print("| --- | --- | --- |", file=open(fileName, "a"))
+    print("| --- | --- | --- |", file=open(file_name, "a"))
 
     # For each row in the sample data, output that row's data to the markdown file
     for row in [row1, row2, row3]:
-        print(f"| {row[0]} | {row[1]} | {row[2]} |", file=open(fileName, "a"))
+        print(f"| {row[0]} | {row[1]} | {row[2]} |", file=open(file_name, "a"))
 
 if __name__ == "__main__":
     main()
