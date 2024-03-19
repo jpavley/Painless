@@ -11,9 +11,9 @@ import pandas as pd
 import re # Regular expressions
 
 def main():
-    getPresidents()
+    get_presidents()
 
-def getPresidents():
+def get_presidents():
     import datetime
  
     # Get the current month
@@ -21,7 +21,7 @@ def getPresidents():
 
     fileName = "US-Presidents.csv"
     df = pd.read_csv(fileName)
-    df['Born'] = df['Born'].apply(cleanDate) # Remove characters in square brackets using regular expressions
+    df['Born'] = df['Born'].apply(clean_date) # Remove characters in square brackets using regular expressions
     df['Born'] = df['Born'].apply(parse_dates) # Convert the date strings into datetime objects
 
     data = get_data_in_range(df, currentMonth, currentMonth)  # Get data of people born in January, February, or March
@@ -34,7 +34,7 @@ def getPresidents():
     for i in range(len(president_names)):
         print(f"{president_names[i]} was born on {president_birthdays[i].strftime('%B %d, %Y')}. He weighed {president_weights[i]} lbs and was {president_heights[i]} ft. tall.")
 
-def cleanDate(dateString):
+def clean_date(dateString):
     # Remove characters in square brackets using regular expressions
     cleanedDate = re.sub(r"\[.*\]", "", dateString)
     return cleanedDate
