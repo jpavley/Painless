@@ -17,7 +17,7 @@ def getPresidents():
     import datetime
  
     # Get the current month
-    currentMonth = datetime.datetime.now().month
+    currentMonth = datetime.datetime.now().month + 3
 
     fileName = "US-Presidents.csv"
     df = pd.read_csv(fileName)
@@ -32,7 +32,7 @@ def getPresidents():
     president_weights = data[:,3]
 
     for i in range(len(president_names)):
-        print(f"{president_names[i]} was born on {president_birthdays[i].strftime('%B %d, %Y')}. He weighed {president_weights[i]} lbs. and was {president_heights[i]} ft. tall.")
+        print(f"{president_names[i]} was born on {president_birthdays[i].strftime('%B %d, %Y')}. He weighed {president_weights[i]} lbs and was {president_heights[i]} ft. tall.")
 
 def cleanDate(dateString):
     # Remove characters in square brackets using regular expressions
