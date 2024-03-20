@@ -50,7 +50,7 @@ def get_presidential_data_for_current_month(current_month):
 
 def generate_chart(file_name, data, current_month_name, current_month_year):
     title = "American Presidents Birthday Briefing"
-    subtitle = "Updated on"
+    subtitle = "Updated as of"
     column = ["Name", "Birthday", "Height", "Weight"]
     print(f"# {title}\n", file=open(file_name, "a"))
     print(f"## {subtitle} {current_month_name} {current_month_year}\n", 
