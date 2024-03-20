@@ -23,12 +23,9 @@ def generate_presidental_birthday_briefing():
     current_month_index = datetime.datetime.now().month
     current_month_name = datetime.datetime.now().strftime("%B")
     current_month_year = datetime.datetime.now().year
-
     file_name = generate_unique_file_name(current_month_name,
                                           current_month_year)
-    print(file_name)
     data = get_presidential_data_for_current_month(current_month_index)
-    print(data)
     generate_chart(file_name,
                    data,
                    current_month_name,
@@ -52,14 +49,16 @@ def generate_chart(file_name, data, current_month_name, current_month_year):
     title = "American Presidents Birthday Briefing"
     subtitle = "Updated as of"
     column = ["Name", "Birthday", "Height", "Weight"]
+    
     print(f"# {title}\n", file=open(file_name, "a"))
     print(f"## {subtitle} {current_month_name} {current_month_year}\n", 
           file=open(file_name, "a"))
     print(f"| {column[0]} | {column[1]} | {column[2]} | {column[3]} |", 
           file=open(file_name, "a"))
     print("| --- | --- | --- | --- |", file=open(file_name, "a"))
+    
     for row in data:
-        print(f"| {row[0]} | {row[1]} | {row[2]} | {row[3]} |", 
+        print(f"| {row[0]} | {row[1].strftime('%B %d, %Y')} | {row[2]} | {row[3]} |", 
               file=open(file_name, "a"))
 
 if __name__ == "__main__":
