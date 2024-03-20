@@ -23,38 +23,59 @@ def main():
 
 # This is the function that does all the work
 def generate_presidental_birthday_briefing():
-    current_month_index = datetime.datetime.now().month    
+    # Get the current month from the system clock
+    current_month_index = datetime.datetime.now().month
+    # Get the file name based on the current month index
     file_name = generate_unique_file_name(current_month_index)
-    data = get_presidential_data_for_current_month(current_month_index)
+    # Get the president data for the current month
+    data = get_presidential_data_for_current_month("US-Presidents.csv", 
+                                                   current_month_index)
+    # Make the chart and write it to a file in markdown format
     generate_chart(file_name, data, current_month_index)
     
-    
+# This function creates a unique file name which includes the month and year
 def generate_unique_file_name(current_month_index):
-    # Create a unique file name using the month and year
+    # Make the month name from the it's index number
     current_month_name = get_month_from_int(current_month_index).strftime("%B")
+    # Make the year digits from the month
     current_month_year = get_month_from_int(current_month_index).year
+    # Make the the file_name gluing it all together in an f-string
     file_name = f"pres_briefing_{current_month_name}_{current_month_year}.md"
     return file_name
 
-def get_presidential_data_for_current_month(current_month_index):
-    fileName = "US-Presidents.csv"
-    df = pd.read_csv(fileName)
+# This function grabs data from the CSV file for the current month
+# and returns it as a list of lists
+def get_presidential_data_for_current_month(file_name, current_month_index):
+    # make a data frame by reading all the data in form the CSV file
+    df = pd.read_csv(file_name)
+    # clean the date and parse it into a datetime object
     df['Born'] = df['Born'].apply(pe4_2.clean_date)
-    df['Born'] = df['Born'].apply(pe4_2.parse_dates) 
+    df['Born'] = df['Born'].apply(pe4_2.parse_dates)
+    # get just the rows of data for the current month
     data = pe4_2.get_data_in_range(df, current_month_index, current_month_index)
     return data
 
+# This function returns a datetime object for a month given an integer
 def get_month_from_int(month_int):
+    # Start with the current DateTime as a default
     current_year = datetime.datetime.now().year
+    # Return a DateTime for the given month index
     return datetime.datetime(current_year, month_int, 1)
 
+# This function creates a chart in a markdown file with all the data
+# from the spreadsheet for the current month
 def generate_chart(file_name, data, current_month_index):
+    # Make all the parts we need for the title, subtitle, and column names
     title = "American Presidents Birthday Briefing"
     subtitle = "Updated as of"
     column = ["Name", "Birthday", "Height", "Weight"]
+    # Make the month name and year from the current month index
     current_month_name = get_month_from_int(current_month_index).strftime("%B")
     current_month_year = get_month_from_int(current_month_index).year
     
+    # We're writing to the file a little differently this time
+    # First we open the file in write mode
+    # Then we print each line of the chart to the file
     with open(file_name, "w") as file:
         print(f"# {title}\n", file=file)
         print(f"## {subtitle} {current_month_name} {current_month_year}\n", 
