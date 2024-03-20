@@ -16,8 +16,8 @@ def main():
 # We reached inside the pe2 script (aka painless_example2_4.py) to call the
 # message script
 
-# Once loaded the pe2 script has become a module which can be used by any other
-# script
+# Once loaded the pe2 script has become a module which can be used by any
+# other script
 
 if __name__ == "__main__":
     main()

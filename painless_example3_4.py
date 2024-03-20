@@ -1,30 +1,30 @@
 # Painless Python
 # A ridiculously deep dive into the the print function
 import datetime as dt # Import the datetime module so we can tell time
-# import painless_example2_4 as pe2
+# import painless_example2_4 as pe2 # This line is commented out, Why?
 
 # Example 3.4
-# Print to a file.
+# Print to a file
+
 def message(greeting, name, file_name):
     if file_name:
-        file = open(file_name, "a")
-        print(f"{greeting}, {name}!", file=file)
+         # There is a file_name
+        file = open(file_name, "a") # Create and open file in append mode
+        print(f"{greeting}, {name}!", file=file) # Send data to file
     else:
-        print(f"{greeting}, {name}!")
+        # There is no file_name
+        print(f"{greeting}, {name}!") # Send data to terminal
 
-def main():
-    # This is a conditional statement: if something is true do this, else do that.
-    if dt.datetime.now().hour < 12:
-        greeting = "Good morning"
-    else:
-        greeting = "Good afternoon"
-    message(greeting=greeting, name="Aida", file_name=None)
-    message(greeting=greeting, name="Aida", file_name="painless_example3_4.txt")
+def main():    
+    # Just for testing we'll send the message to the terminal and then a file
+    message(greeting="Sup", name="Beth", file_name=None)
+    message(greeting="Hi", name="Beth", file_name="painless_example3_4.txt")
 
 # What is a file?
 # What happens if fileName is " "?
 # Does the open function do?
 # What does the "a" mean?
+# What other file modes are there for writing data?
 
 if __name__ == "__main__":
     main()

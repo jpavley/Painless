@@ -7,7 +7,8 @@ import painless_example2_4 as pe2
 
 def main():
     # Two ways to call the message function with user input:
-    # 1. Using variables to pass the input data to the message function.
+    
+    # 1. Using variables to pass the input data to the message function
     greeting = input("What is your greeting? ")
     name = input("What is the name of the greeted? ")
     pe2.message(greeting=greeting, name=name)

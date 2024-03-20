@@ -18,7 +18,7 @@ questions, develop an intutive understanding before you a theoretical one.
 
 - This document is written in markdown and the examples use markdown as well.
 <https://www.markdownguide.org/getting-started/>
-- The examples use a CSV file from Kaggle: 
+- The examples use a CSV file from Kaggle:
 <https://www.kaggle.com/datasets/zsinghrahulk/us-presidents-age-state-health-and-wealth?resource=download>
 - My preferred IDE (Integrated Development Environment) is Visual Studio Code.
 It's free and better than most other IDEs. <https://code.visualstudio.com>

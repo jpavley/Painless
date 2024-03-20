@@ -4,40 +4,56 @@
 # Example 4.2
 # Figure out how to grab data for particular month from a spreadsheet.
 
-# I found a great CSV file that contains the birth dates and other intereasting facts about presidents.
-# Let' see if we can open it up and grab data based on the current month.
+# I found a great CSV file that contains the birth dates and other 
+# intereasting facts about presidents
 
-import pandas as pd
-import re # Regular expressions
+# Lets see if we can open it up and grab data based on the current month
+
+# This task is a complicated job. Lets get help from the Python community:
+import pandas as pd # Pandas is a module that let us work with CVS data
+import re # RE is a module that let us use regular expressions to filter data
+import datetime
 
 def main():
     get_presidents()
 
 def get_presidents():
-    import datetime
  
     # Get the current month
-    currentMonth = datetime.datetime.now().month + 3
-
+    currentMonth = datetime.datetime.now().month
+    
+    # Get the name of our data file
     fileName = "US-Presidents.csv"
+    
+    # Use Pandas to read this data file into a data frame 
+    # (it's like spread sheeet)
     df = pd.read_csv(fileName)
-    df['Born'] = df['Born'].apply(clean_date) # Remove characters in square brackets using regular expressions
-    df['Born'] = df['Born'].apply(parse_dates) # Convert the date strings into datetime objects
+    
+    # I noticed 2 problems with the data in the Born column
+    
+    # 1. There are extra characters appended to some of the dates
+    df['Born'] = df['Born'].apply(clean_date) # Remove extra characters
+    
+    # 2. The date strings are in two different formats and need to be 
+    # TimeStamp objects
+    df['Born'] = df['Born'].apply(parse_dates) # Convert into TimeStamp objects
 
-    data = get_data_in_range(df, currentMonth, currentMonth)  # Get data of people born in January, February, or March
+    # Now we can get the date data in the Born column for the current month
+    data = get_data_in_range(df, currentMonth, currentMonth)
 
-    president_names = data[:,0]
-    president_birthdays = data[:,1]
-    president_heights = data[:,2]
-    president_weights = data[:,3]
+    president_names = data[:,0]     # Create a list of names
+    president_birthdays = data[:,1] # Create a list of birthdays
+    president_heights = data[:,2]   # Create a list of heights
+    president_weights = data[:,3]   # Create a list of weights
 
     for i in range(len(president_names)):
+        # for each president found print a string
         print(f"{president_names[i]} was born on {president_birthdays[i].strftime('%B %d, %Y')}. He weighed {president_weights[i]} lbs and was {president_heights[i]} ft. tall.")
 
 def clean_date(date_string):
     # Remove characters in square brackets using regular expressions
-    cleanedDate = re.sub(r"\[.*\]", "", date_string)
-    return cleanedDate
+    cleaned_date = re.sub(r"\[.*\]", "", date_string)
+    return cleaned_date
 
 def parse_dates(date):
     # We have two date formats in our data: '%b %d, %Y' and '%d-%b-%y'
