@@ -12,13 +12,16 @@
 # but we're combining it sophisticated tools from the Python community
 
 # let's resuse the data cleaning and parsing functions
-import painless_example4_2 as pe4_2 
+import painless_example4_2 as pe4_2
+
+# Some other imports we'll need
 import datetime
 import pandas as pd
 
 def main():
     generate_presidental_birthday_briefing()
 
+# This is the function that does all the work
 def generate_presidental_birthday_briefing():
     current_month_index = datetime.datetime.now().month    
     file_name = generate_unique_file_name(current_month_index)
@@ -52,16 +55,13 @@ def generate_chart(file_name, data, current_month_index):
     current_month_name = get_month_from_int(current_month_index).strftime("%B")
     current_month_year = get_month_from_int(current_month_index).year
     
-    print(f"# {title}\n", file=open(file_name, "a"))
-    print(f"## {subtitle} {current_month_name} {current_month_year}\n", 
-          file=open(file_name, "a"))
-    print(f"| {column[0]} | {column[1]} | {column[2]} | {column[3]} |", 
-          file=open(file_name, "a"))
-    print("| --- | --- | --- | --- |", file=open(file_name, "a"))
-    
-    for row in data:
-        print(f"| {row[0]} | {row[1].strftime('%B %d, %Y')} | {row[2]} | {row[3]} |", 
-              file=open(file_name, "a"))
+    with open(file_name, "w") as file:
+        print(f"# {title}\n", file=file)
+        print(f"## {subtitle} {current_month_name} {current_month_year}\n", file=file)
+        print(f"| {column[0]} | {column[1]} | {column[2]} | {column[3]} |", file=file)
+        print("| --- | --- | --- | --- |", file=file)
+        for row in data:
+            print(f"| {row[0]} | {row[1].strftime('%B %d, %Y')} | {row[2]} | {row[3]} |", file=file)
 
 if __name__ == "__main__":
     main()
