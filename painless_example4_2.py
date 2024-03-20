@@ -41,14 +41,23 @@ def get_presidents():
     #    column into TimeStamp objects
     df['Born'] = df['Born'].apply(parse_dates) 
     
-    # 3. Now we can get the row data in the data frame for just the 
-    # current month
+    # 3. Now we can get the row data (in a new data frame) for just the 
+    #    current month
     data = get_data_in_range(df, currentMonth, currentMonth)
+    
+    # The new data frame has four columns: President, Born, Height (ft), 
+    # and Weight (lbs)
+    
+    # We access them by their column index (0 through 3)
     
     president_names = data[:,0]     # Create a list of names
     president_birthdays = data[:,1] # Create a list of birthdays
     president_heights = data[:,2]   # Create a list of heights
     president_weights = data[:,3]   # Create a list of weights
+    
+    # We broken them in to 4 lists because I thought that would be easiest to
+    # to merge into an f-string with 4 different variables. The index of each
+    # element in each list is a key that keeps the lists in sync
 
     for i in range(len(president_names)):
         # for each president found print a string
