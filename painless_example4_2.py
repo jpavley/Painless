@@ -2,7 +2,7 @@
 # A ridiculously deep dive into the the print function
 
 # Example 4.2
-# Figure out how to grab data for particular month from a spreadsheet.
+# Figure out how to grab data for particular month from a spreadsheet
 
 # I found a great CSV file that contains the birth dates and other 
 # intereasting facts about presidents
