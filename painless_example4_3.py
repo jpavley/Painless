@@ -20,33 +20,41 @@ def main():
     generate_presidental_birthday_briefing()
 
 def generate_presidental_birthday_briefing():
-    file_name = generate_unique_file_name()
-    print(file_name)
-    data = get_presidential_data_for_current_month()
-    print(data)
-    generate_chart(file_name, data)
-    
-    
-def generate_unique_file_name():
-    # Create a unique file name using the month and year
+    current_month_index = datetime.datetime.now().month
     current_month_name = datetime.datetime.now().strftime("%B")
     current_month_year = datetime.datetime.now().year
+
+    file_name = generate_unique_file_name(current_month_name,
+                                          current_month_year)
+    print(file_name)
+    data = get_presidential_data_for_current_month(current_month_index)
+    print(data)
+    generate_chart(file_name,
+                   data,
+                   current_month_name,
+                   current_month_year)
+    
+    
+def generate_unique_file_name(current_month_name, current_month_year):
+    # Create a unique file name using the month and year
     file_name = f"pres_briefing_{current_month_name}_{current_month_year}.md"
     return file_name
 
-def get_presidential_data_for_current_month():
-    currentMonth = datetime.datetime.now().month
+def get_presidential_data_for_current_month(current_month):
     fileName = "US-Presidents.csv"
     df = pd.read_csv(fileName)
     df['Born'] = df['Born'].apply(pe4_2.clean_date)
     df['Born'] = df['Born'].apply(pe4_2.parse_dates) 
-    data = pe4_2.get_data_in_range(df, currentMonth, currentMonth)
+    data = pe4_2.get_data_in_range(df, current_month, current_month)
     return data
 
-def generate_chart(file_name, data):
+def generate_chart(file_name, data, current_month_name, current_month_year):
     title = "American Presidents Birthday Briefing"
+    subtitle = "Updated on"
     column = ["Name", "Birthday", "Height", "Weight"]
     print(f"# {title}\n", file=open(file_name, "a"))
+    print(f"## {subtitle} {current_month_name} {current_month_year}\n", 
+          file=open(file_name, "a"))
     print(f"| {column[0]} | {column[1]} | {column[2]} | {column[3]} |", 
           file=open(file_name, "a"))
     print("| --- | --- | --- | --- |", file=open(file_name, "a"))
