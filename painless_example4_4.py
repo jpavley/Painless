@@ -41,12 +41,14 @@ completion = client.chat.completions.create(
   # but the response might not be as good as gpt-4)
   model="gpt-4",
   # Send to prompt to the model
-  # The whole trick here is figure out a prompt that will get the model to do what we want
+  # The whole trick here is figure out a prompt that will get the model to 
+  # do what we want
   # Sometimes its not easy, but its not codoing, its natural language
   messages=[
-    # The system role explains to the model what kind of helper we want it to simulate
+    # The system role explains to the model what kind of helper we want it to 
+    # simulate
     {"role": "system", "content": "You are a research assistant, expert in the presidents of the united states and you have a dry sense of humor."},
-    # The user roles asks the model what the task is
+    # The user roles explains the task to the model
     {"role": "user", "content": f"Create a table with the following information. The title of the table is 'American Presidents Birthday Briefing'. The subtitle is 'Updated as of {current_month_name} {current_year}'. Inside the braces are variables that you should replace with the current month the current year. The column headers of the table should be 'Name', 'Birthday', and 'Fun Fact'. For each president born in the current month table will have a row corresponding to that presidents name, birthday, and a fun fact. Only include presidents born in in {current_month_name}. Do not include any presidents born in any other months. The fun fact is an short and amusing anecdote about that president. The whole table should be written as a file in markdown format. Just provide the markdown, no introduction, no comments, no notes, nothing outside the markdown."}
   ]
 )
@@ -62,5 +64,11 @@ print(completion.choices[0].message.content, file=open(file_name, "w"))
 # x Figure out how to grab data for particular month from a spreadsheet
 # x Figure out how to merge the data in in the spreadsheet with the chart
 # x Figure out how to automate the process of creating the chart in markdown
+
+# We could have started with OpenAI and skipped all the coding
+# But we actually needed some of the prior code to make the prompt work
+# And we needed to learn how to code to understand how to call the OpenAI API
+
+
 
 
