@@ -26,3 +26,5 @@ It's free and better than most other IDEs. <https://code.visualstudio.com>
 <https://pandas.pydata.org>
 - There are hundreds of Python resources online. I recommend you start with
 Python.org. <https://www.python.org>
+- In the final example I use the OpenAI API and the OpenAI Python Library. 
+<https://platform.openai.com/docs/api-reference/introduction>
