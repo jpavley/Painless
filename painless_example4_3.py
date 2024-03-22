@@ -34,13 +34,13 @@ def generate_presidental_birthday_briefing():
     generate_chart(file_name, data, current_month_index)
     
 # This function creates a unique file name which includes the month and year
-def generate_unique_file_name(current_month_index):
+def generate_unique_file_name(current_month_index, version=0):
     # Make the month name from the it's index number
     current_month_name = get_month_from_int(current_month_index).strftime("%B")
     # Make the year digits from the month
     current_month_year = get_month_from_int(current_month_index).year
     # Make the the file_name gluing it all together in an f-string
-    file_name = f"pres_briefing_{current_month_name}_{current_month_year}.md"
+    file_name = f"pres_briefing_{current_month_name}_{current_month_year} v{version}.md"
     return file_name
 
 # This function grabs data from the CSV file for the current month

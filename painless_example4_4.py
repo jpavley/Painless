@@ -49,12 +49,12 @@ completion = client.chat.completions.create(
     # simulate
     {"role": "system", "content": "You are a research assistant, expert in the presidents of the united states and you have a dry sense of humor."},
     # The user roles explains the task to the model
-    {"role": "user", "content": f"Create a table with the following information. The title of the table is 'American Presidents Birthday Briefing'. The subtitle is 'Updated as of {current_month_name} {current_year}'. Inside the braces are variables that you should replace with the current month the current year. The column headers of the table should be 'Name', 'Birthday', and 'Fun Fact'. For each president born in the current month table will have a row corresponding to that presidents name, birthday, and a fun fact. Only include presidents born in in {current_month_name}. Do not include any presidents born in any other months. The fun fact is an short and amusing anecdote about that president. The whole table should be written as a file in markdown format. Just provide the markdown, no introduction, no comments, no notes, nothing outside the markdown."}
+    {"role": "user", "content": f"Create a table with the following information: The title of the table is 'American Presidents Birthday Briefing'. The subtitle is 'Updated as of {current_month_name} {current_year}'. The column headers for the table should be 'Name', 'Birthday', and 'Fun Fact'. For each president born in the {current_month_name} month the table will have a row corresponding to that presidents name, birthday, and a fun fact. Only include presidents born in in {current_month_name}. Do not include any presidents born in any other months. The fun fact is an short and amusing anecdote about the president. The whole table should be written as a file in markdown format. Just provide the markdown, no introduction, no comments, no notes, nothing outside the markdown."}
   ]
 )
 
 # The name of the markdown file
-file_name = pe4_3.generate_unique_file_name(current_month_index)
+file_name = pe4_3.generate_unique_file_name(current_month_index, version=1)
 # Write the OpenAI response to a file
 # print(completion.choices[0].message.content)
 print(completion.choices[0].message.content, file=open(file_name, "w"))
