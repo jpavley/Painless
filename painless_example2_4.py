@@ -9,6 +9,9 @@
 
 def main():
     message(greeting ="Yo", name="Ringo") # pass a greeting and a name
+    message(greeting ="Hi", name="Samantha")
+    message(greeting ="Goodbye", name="Charlie")
+
     
 def message(greeting, name):
     print(f"{greeting}, {name}!") # two arguments merged into one string
