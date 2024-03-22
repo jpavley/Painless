@@ -18,6 +18,8 @@ questions, develop an intutive understanding before you a theoretical one.
 
 ## Notes
 
+- The code for this introduction is hosted by Github. You can sign up for Github
+here: <https://github.com/pricing> (Choose the free option!)
 - This document is written in markdown and the examples use markdown as well.
 <https://www.markdownguide.org/getting-started/>
 - The examples use a CSV file from Kaggle:
