@@ -14,6 +14,7 @@
 def main():
     hello_argument(name="George") # Set the value of name when calling
     hello_argument(name="Susan")
+    hello_argument(name="Angel")
     
 def hello_argument(name):
     print(f"Hello, {name}!") # Use the arguement as a variable

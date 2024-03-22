@@ -13,7 +13,7 @@ def main():
 # Printing a message to the terminal using a variable
 
 def hello_variable():
-    name = "John" # Declare a variable assign it a value
+    name = "Angel" # Declare a variable assign it a value
     # Use the variable as 1 of 3 arugments passed to the print function
     print("Hello,", name, "!")
 

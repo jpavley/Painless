@@ -18,7 +18,7 @@ def message(greeting, name, file_name):
 def main():    
     # Just for testing we'll send the message to the terminal and then a file
     message(greeting="Sup", name="Beth", file_name=None)
-    message(greeting="Hi", name="Beth", file_name="painless_example3_4.txt")
+    message(greeting="Goodbye", name="Beth", file_name="painless_example3_4.txt")
 
 # What is a file?
 # What happens if fileName is " "?
