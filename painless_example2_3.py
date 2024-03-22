@@ -13,6 +13,7 @@
 
 def main():
     hello_argument(name="George") # Set the value of name when calling
+    hello_argument(name="Susan")
     
 def hello_argument(name):
     print(f"Hello, {name}!") # Use the arguement as a variable
