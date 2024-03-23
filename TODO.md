@@ -11,6 +11,7 @@
 - Add an FAQ file.
 - Add a contributers file.
 - Add a code of conduct file.
+- Include references in the readme.md to a few tools I forgot to mention: Github Desktop and the VS Code plugins (Github Copilot and Copilot Chat, markdownlint, Pylance, Python, Python Debugger, and Rainbow CSV).
 
 ## In Progress
 
