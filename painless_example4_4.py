@@ -59,6 +59,15 @@ file_name = pe4_3.generate_unique_file_name(current_month_index, version=1)
 # print(completion.choices[0].message.content)
 print(completion.choices[0].message.content, file=open(file_name, "w"))
 
+# The respnse from OpenAI contains some unwanted characters so let's clean it up
+with open('pres_briefing_March_2024 v1.md', 'r') as file:
+    lines = file.readlines()
+
+with open('pres_briefing_March_2024 v1.md', 'w') as file:
+    for line in lines:
+        if line.strip("\n") != "```markdown" and line.strip("\n") != "```":
+            file.write(line)
+
 # Monthly presidential brithday briefing todo list:
 # x Figure out how to create a markdown file that contains a chart
 # x Figure out how to grab data for particular month from a spreadsheet
