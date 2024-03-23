@@ -1,6 +1,7 @@
 # A Painless Introduction to Python Programming
 
-<jpavley@newscorp.com>
+Primary Author: <jpavley@newscorp.com>
+Project Version: 1.0
 
 ## Introduction
 
