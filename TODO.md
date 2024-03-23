@@ -14,4 +14,8 @@
 
 ## In Progress
 
+- Clean up the OpenAI API output in example4_4 so that it displays in a markdown reader properly.
+
 ## Done
+
+- Create a TODO.md file
