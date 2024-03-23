@@ -19,17 +19,17 @@ questions, develop an intutive understanding before you a theoretical one.
 
 ## Notes
 
-- The code for this introduction is hosted by Github. You can sign up for Github
+- The code for this introduction is hosted by **Github**. You can sign up for Github
 here: <https://github.com/pricing> (Choose the free option!)
-- This document is written in markdown and the examples use markdown as well.
+- This document is written in **markdown** and the examples use markdown as well.
 <https://www.markdownguide.org/getting-started/>
-- The examples use a CSV file from Kaggle:
+- The examples use a CSV file from **Kaggle**:
 <https://www.kaggle.com/datasets/zsinghrahulk/us-presidents-age-state-health-and-wealth?resource=download>
-- My preferred IDE (Integrated Development Environment) is Visual Studio Code.
+- My preferred IDE (Integrated Development Environment) is **Visual Studio Code**.
 It's free and better than most other IDEs. <https://code.visualstudio.com>
-- If you're going work with data you need the Pandas library.
+- If you're going work with data you need the **Pandas** library.
 <https://pandas.pydata.org>
 - There are hundreds of Python resources online. I recommend you start with
-Python.org. <https://www.python.org>
-- In the final example I use the OpenAI API and the OpenAI Python Library.
+**Python.org**. <https://www.python.org>
+- In the final example I use the **OpenAI API** and the **OpenAI Python Library**.
 <https://platform.openai.com/docs/api-reference/introduction>
