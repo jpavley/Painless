@@ -13,9 +13,9 @@
 # Let's try to get ChatGPT to do the work for us!
 
 # I installed the OpenAI Python package with pip
-from openai import OpenAI
+from openai import OpenAI # pip3 install openai
 # I'm storying my OpenAI API key in a .env file so you can't steal it!
-from dotenv import load_dotenv
+from dotenv import load_dotenv # pip3 install python-dotenv
 # I'm using the os library to load the environment variables
 import os
 # Let's reuse the file name generator from the previous example

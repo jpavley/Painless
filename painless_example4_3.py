@@ -16,7 +16,7 @@ import painless_example4_2 as pe4_2
 
 # Some other imports we'll need
 import datetime
-import pandas as pd
+import pandas as pd # pip3 install pandas
 
 def main():
     generate_presidental_birthday_briefing()
