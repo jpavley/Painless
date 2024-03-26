@@ -4,7 +4,6 @@
 
 - Document full setup, configuration, and installation instructions for all libraries and resources required to use the repo.
 - Automate the process of set, configuration, and setup, configuration, and installation with Pythons virual invironments and or a cloudspace.
-- Record the demo.
 - Write a deck or document based on the demo.
 - The OpenAI response in example4_4 is unreliable and error prone... fix it!
 - Reorganize the repo so that the source is easier to work with.
@@ -14,6 +13,8 @@
 - Include references in the readme.md to a few tools I forgot to mention: Github Desktop and the VS Code plugins (Github Copilot and Copilot Chat, markdownlint, Pylance, Python, Python Debugger, and Rainbow CSV).
 
 ## In Progress
+
+- Record the demo.
 
 ## Done
 
