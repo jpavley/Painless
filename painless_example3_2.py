@@ -11,7 +11,7 @@ def main():
     # 1. Using variables to pass the input data to the message function
     greeting = input("What is your greeting? ")
     name = input("What is the name of the greeted? ")
-    pe2.message(greeting=greeting, name=name)
+    pe2.message(greeting, name)
     
     # 2. Using the input function as a parameter inside the call to the message 
     # function directly.
