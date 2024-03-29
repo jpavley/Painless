@@ -9,7 +9,7 @@ import painless_example2_4 as pe2
 def main():
     # This is a conditional statement: 
     # if something is true do this, else do that
-    if dt.datetime.now().hour < 12:
+    if dt.datetime.now().hour > 12: # TODO: Fix off by one error
         # the current hour is less than 12
         greeting = "Good morning"
     else:
