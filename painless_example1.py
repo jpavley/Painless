@@ -24,4 +24,4 @@ else:
 # What does loading mean?
 # What does run mean?
 # What does process mean?
-# What is that orange line to the right? ------------------------------------->
+# If we run this script again and again, what will happen?
