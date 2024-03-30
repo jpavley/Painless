@@ -1,12 +1,10 @@
 # Painless Python
 # A ridiculously deep dive into the the print function
-import datetime as dt # Import the datetime module so we can tell time
-# import painless_example2_4 as pe2 # This line is commented out, Why?
 
 # Example 3.4
 # Print to a file
 
-def message(greeting, name, file_name):
+def message(greeting, name, file_name=None):
     if file_name:
          # There is a file_name
         file = open(file_name, "a") # Create and open file in append mode
@@ -17,8 +15,12 @@ def message(greeting, name, file_name):
 
 def main():    
     # Just for testing we'll send the message to the terminal and then a file
-    message(greeting="Sup", name="Beth", file_name=None)
-    message(greeting="Goodbye", name="Beth", file_name="painless_example3_4.txt")
+    #message(greeting="Sup", name="Beth", file_name=None)
+    #message(greeting="Goodbye", name="Beth", file_name="painless_example3_4.txt")
+
+    message(greeting="Hi", name="Angel")
+
+
 
 # What is a file?
 # What happens if fileName is " "?
