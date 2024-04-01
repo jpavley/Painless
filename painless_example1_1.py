@@ -10,6 +10,7 @@ def main(): # Define a function named "main"
     print("Hello, World!") # Print an argument to the terminal
 
 # What is a script?
+# What is a comment?
 # What is a function?
 # What is a argument?
 # What is a terminal?
