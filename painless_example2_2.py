@@ -26,11 +26,12 @@ def hello_fstring():
     name = "🤨"
     print(f"Hello, {name}!")
 
-    # Can a string include japanese characters?
+    # Can a string include Japanese characters?
     name = "こんにちは"
     print(f"Hello, {name}!")
 
 # What is a string?
+# How can a string support English, emoji, and Japanese characters?
 # What do the quoation marks do?
 # What is a f-string?
 # What do the curly braces do?
