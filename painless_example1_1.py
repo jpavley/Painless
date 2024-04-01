@@ -1,7 +1,7 @@
 # Painless Python
 # A ridiculously deep dive into Python by way of the the print function
 
-# Example 1
+# Example 1.1
 # Sending a message to something somewhere somehow
 
 # This is the Minimum Viable Python script
@@ -14,7 +14,7 @@ def main(): # Define a function named "main"
 # What is a argument?
 # What is a terminal?
 
-# Use a conditional statement to perform a test when executing this script
+# Use a conditional statement to perform a test when running this script
 if __name__ == "__main__": # if name of the current module is "__main__"
     # The script is being run directly
     print(__name__) # should be "__main__"
@@ -25,8 +25,7 @@ else:
     pass # Don't do anything
 
 # What is a conditional statement?
-# What does executing mean?
-# How do you execute a python script?
+# How do you run a python script?
 # What does run directly mean?
 # What does import mean?
 # If we run this script again, what will happen?
