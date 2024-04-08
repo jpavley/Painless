@@ -1,24 +1,23 @@
 # Painless Python
 # A ridiculously deep dive into the the print function
 
-# Example 2.3 is much less hard coded than before but it still contains some 
-# hard coding because it can only say hello
+# Example 2.3 is much less hard coded than before
+# It still contains some hard coding:
+# - We have to write repetitive code 
 
 # Example 2.4
-# Printing a message to the terminal using two variables inside an f-string
+# Printing a message to the terminal using a list and a for loop
 
 def main():
-    message(greeting ="Yo", name="Ringo") # pass a greeting and a name
-    message(greeting ="Hi", name="Samantha")
-    message(greeting ="Goodbye", name="Charlie")
+    # for loop repeats itself for each element in a list
+    for name in ["John", "Paul", "George", "Ringo"]: 
+        # the "name" variable's value is to the next element in the list each time the loop repeats
+        message(name)
 
     
-def message(greeting, name):
-    print(f"{greeting}, {name}!") # two arguments merged into one string
+def message(name):
+    print(f"Hello, {name}!") # two arguments merged into one string
     
-# Note that we wrapped the print function in a function called message
-# If we find something better than the print function we need only to change 
-# the message function and not all the code than calls the message function
     
 # What else can we do with the with our message function?
 # - Reuse the message function in another script
