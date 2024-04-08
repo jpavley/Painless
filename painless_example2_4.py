@@ -14,10 +14,11 @@ def main():
         # the "name" variable's value is to the next element in the list each time the loop repeats
         message(name)
 
+# What does the command "for" tell Python to do?
+# What does the command "in" tell Python to do?
     
 def message(name):
     print(f"Hello, {name}!") # two arguments merged into one string
-    
     
 # What else can we do with the with our message function?
 # - Reuse the message function in another script

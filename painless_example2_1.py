@@ -6,7 +6,7 @@ def main():
     
 # One problem with example 1.1 is that the message is hard coded...
 # Hard coded means the code has to be rewritten to make an expected change
-# Hard coding is inflexable, static, resistant to change
+# Hard coding is inflexible, static, difficult to change
 # Hard coding makes our code less reusable
 
 # Let's see if we can make our script less hard coded

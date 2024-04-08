@@ -9,8 +9,7 @@
 # Let's see if we can make our script even less hard coded
 
 # Example 2.3
-# Printing a message to the terminal passing a argument when the function is
-# called
+# Printing a message to the terminal passing a argument when the function is called
 
 def main():
     hello_argument(name="George") # Set the value of name when calling

@@ -32,7 +32,7 @@ def hello_fstring():
 
 # What is a string?
 # How can a string support English, emoji, and Japanese characters?
-# What do the quoation marks do?
+# What do the quotation marks do?
 # What is a f-string?
 # What do the curly braces do?
     

@@ -1,26 +1,24 @@
 # Painless Python
 # A ridiculously deep dive into the the print function
 import datetime as dt # Import the DateTime module so we can tell time
-import painless_example2_4 as pe2
 
 # Example 3.3
-# Change the greeting based on the time of day.
+# A ridiculously deep dive into Python by way of the the print function
+
+# Refactor the message function to accept two arguments
+def message(greeting, name):
+        print(f"{greeting}, {name}!")
 
 def main():
-    # This is a conditional statement: 
-    # if something is true do this, else do that
-    if dt.datetime.now().hour > 12: # TODO: Fix off by one error
+    # This is a conditional statement: if something is true do this, else do that
+    if dt.datetime.now().hour < 12:
         # the current hour is less than 12
         greeting = "Good morning"
     else:
         # the current hour is 12 or greater than 12
         greeting = "Good afternoon"
         
-    pe2.message(greeting=greeting, name="Aida")
-
-# This logic is a little hard to test...
-# We have to wait until the morning or afternoon to see if it works
-# How could we fix that?
+    message(greeting, "Alice")
 
 if __name__ == "__main__":
     main()
