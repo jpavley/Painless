@@ -1,5 +1,5 @@
 # Painless Python
-# A ridiculously deep dive into the the print function
+# A ridiculously deep dive into Python by way of the the print function
 
 # Example 3.4
 # Print to a file
@@ -15,15 +15,11 @@ def message(greeting, name, file_name=None):
 
 def main():    
     # Just for testing we'll send the message to the terminal and then a file
-    #message(greeting="Sup", name="Beth", file_name=None)
-    #message(greeting="Goodbye", name="Beth", file_name="painless_example3_4.txt")
-
-    message(greeting="Hi", name="Angel")
-
-
+    message(greeting="G'Day to thee", name="Beth") # using named parameters as arguments
+    message(greeting="God Speed", name="Beth", file_name="painless_example3_4.txt")
 
 # What is a file?
-# What happens if fileName is " "?
+# What happens if fileName is "None"?
 # Does the open function do?
 # What does the "a" mean?
 # What other file modes are there for writing data?
@@ -37,5 +33,5 @@ if __name__ == "__main__":
 # x Change the greeting based on the time of day
 # x Print to a file
 
-# Now it feels like have some real tools in our tookit!
+# Now it feels like have some real tools in our toolkit!
 # Let's do something serious with our message function!
