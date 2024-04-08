@@ -4,10 +4,9 @@
 # Example 4.2
 # Figure out how to grab data for particular month from a spreadsheet
 
-# I found a great CSV file that contains the birth dates and other 
-# intereasting facts about presidents
+# I found a great CSV file that contains the birth dates and other interesting facts about presidents
 
-# Lets see if we can open it up and grab data based on the current month
+# Let's see if we can open it up and grab data based on the current month
 
 # This task is a complicated job. Lets get help from the Python community:
 import pandas as pd # Pandas is a module that let us work with CVS data
@@ -25,29 +24,21 @@ def get_presidents():
     fileName = "US-Presidents.csv"
     
     # Use Pandas to read this data file into a data frame 
-    # (it's like spread sheeet)
+    # (it's like spread sheet)
     df = pd.read_csv(fileName)
         
-    # 1. There are extra characters appended to some of the dates
-    #    (These characters "[a]" prevent the date strings from being
-    #    parsed into a date object by DateTime)
+    # 1. There are extra characters appended to some of the dates; These characters prevent the date strings from being parsed into a date object by DateTime.
     df['Born'] = df['Born'].apply(clean_date)
     
     # (.apply() is a way to call a function on every element of a list)
     
-    # 2. The date strings are in two different formats and some of the 
-    #    date are missing the century digits
-    #    We use this .apply to convert all the date strings in the Born
-    #    column into TimeStamp objects
+    # 2. The date strings are in two different formats and some of the date are missing the century digits We use this .apply to convert all the date strings in the Born column into TimeStamp objects
     df['Born'] = df['Born'].apply(parse_dates) 
     
-    # 3. Now we can get the row data (in a new data frame) for just the 
-    #    current month
+    # 3. Now we can get the row data (in a new data frame) for just the current month
     data = get_data_in_range(df, currentMonth, currentMonth)
     
-    # The new data frame has four columns: President, Born, Height (ft), 
-    # and Weight (lbs)
-    
+    # The new data frame has four columns: President, Born, Height (ft), and Weight (lbs)
     # We access them by their column index (0 through 3)
     
     president_names = data[:,0]     # Create a list of names
@@ -55,9 +46,7 @@ def get_presidents():
     president_heights = data[:,2]   # Create a list of heights
     president_weights = data[:,3]   # Create a list of weights
     
-    # We broken them in to 4 lists because I thought that would be easiest to
-    # to merge into an f-string with 4 different variables. The index of each
-    # element in each list is a key that keeps the lists in sync
+    # We broken them in to 4 lists because I thought that would be easiest to to merge into an f-string with 4 different variables. The index of each element in each list is a key that keeps the lists in sync
 
     for i in range(len(president_names)):
         # for each president found print a string
@@ -65,17 +54,14 @@ def get_presidents():
 
 def clean_date(date_string):
     # Data problem #1: "Feb 22, 1732[a]"
-    # The "[a]" prevents Pandas from recognising the string as a date
+    # The "[a]" prevents Pandas from recognizing the string as a date
     
     # Remove characters in square brackets using regular expressions
     cleaned_date = re.sub(r"\[.*\]", "", date_string)
     
-    # r"\[.*\]" is a regular expression that matches any pattern of characters
-    # that look like "[a]" (brackets with any single character inside them)
+    # r"\[.*\]" is a regular expression that matches any pattern of characters that look like "[a] (brackets with any single character inside them)
     
-    # The re.sub() replaces the matched characters with an empty string--which
-    # is a way to delete them
-     
+    # The re.sub() replaces the matched characters with an empty string--which is a way to delete them
     return cleaned_date
 
 def parse_dates(date):
@@ -127,7 +113,7 @@ def parse_dates(date):
 
 def get_data_in_range(df, start_month, end_month):
     # Drop duplicate rows
-    # Why do we have duplicate rows? Because some presensidents have more than
+    # Why do we have duplicate rows? Because some presidents have more than
     # one term or are appear in more than one row in the data set
     df = df.drop_duplicates(subset="President")
     
@@ -154,7 +140,7 @@ def get_data_in_range(df, start_month, end_month):
 if __name__ == "__main__":
     main()
 
-# Monthly presidential brithday briefing todo list:
+# Monthly presidential birthday briefing todo list:
 # x Figure out how to create a markdown file that contains a chart
 # x Figure out how to grab data for particular month from a spreadsheet
 # - Figure out how to merge the data in in the spreadsheet with the chart
