@@ -1,16 +1,13 @@
 # Painless Python
-# A ridiculously deep dive into the the print function
+# A ridiculously deep dive into Python by way of the the print function
 
 # Let's pretend we have a problem to solve!
 
-# Let's say that every month we have to grab data from a spreadsheet 
-# and create a table that presents that data in a chart
+# Let's say that every month we have to grab data from a spreadsheet and create a table that presents that data in a chart
 
-# This table is called the monthly presidential brithday briefing
-# We also have include a fun fact about each president
+# This table is called the monthly presidential birthday briefing We also have include a fun fact about each president
  
-# How can our limited knowlege of Python help us automate this this 
-# exciting and mission critical task?
+# How can our limited knowledge of Python help us automate this this exciting and mission critical task?
 
 # Here's our todo list:
 # - Figure out how to create a markdown file that contains a chart
@@ -60,7 +57,6 @@ def generate_chart():
               file=open(file_name, "a"))
     
 # Note: [row1, row2, row2] is list and each of its elements are lists
-#       So [row1, row2, row2] is a list of lists!
 
 # This is the format of a markdown table:
 
@@ -75,7 +71,7 @@ def generate_chart():
 if __name__ == "__main__":
     main()
 
-# Monthly presidential brithday briefing todo list:
+# Monthly presidential birthday briefing todo list:
 # x Figure out how to create a markdown file that contains a chart
 # - Figure out how to grab data for particular month from a spreadsheet
 # - Figure out how to merge the data in in the spreadsheet with the chart
