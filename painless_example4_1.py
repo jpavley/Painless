@@ -1,5 +1,5 @@
 # Painless Python
-# A ridiculously deep dive into Python by way of the the print function
+# A ridiculously deep dive into Python by way of the print function
 
 # Let's pretend we have a problem to solve!
 

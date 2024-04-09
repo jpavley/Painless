@@ -1,5 +1,5 @@
 # Painless Python
-# A ridiculously deep dive into the the print function
+# A ridiculously deep dive into the print function
 import datetime as dt # Import the DateTime module so we can tell time
 
 # Example 3.3

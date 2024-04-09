@@ -1,5 +1,5 @@
 # Painless Python
-# A ridiculously deep dive into Python by way of the the print function
+# A ridiculously deep dive into Python by way of the print function
 
 # Example 2.2 solved the extra space and the number of arguments problems
 # But we still have problems:

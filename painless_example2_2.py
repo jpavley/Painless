@@ -1,5 +1,5 @@
 # Painless Python
-# A ridiculously deep dive into Python by way of the the print function
+# A ridiculously deep dive into Python by way of the print function
 
 def main():
     hello_fstring()

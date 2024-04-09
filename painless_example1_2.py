@@ -1,5 +1,5 @@
 # Painless Python
-# A ridiculously deep dive into Python by way of the the print function
+# A ridiculously deep dive into Python by way of the print function
 
 # Example 1.2
 # Importing a script

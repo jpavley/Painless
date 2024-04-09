@@ -1,5 +1,5 @@
 # Painless Python
-# A ridiculously deep dive into the the print function
+# A ridiculously deep dive into Python by way of the print function
 
 # Example 2.3 is much less hard coded than before
 # It still contains some hard coding:

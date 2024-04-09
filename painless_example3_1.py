@@ -1,5 +1,5 @@
 # Painless Python
-# A ridiculously deep dive into the the print function
+# A ridiculously deep dive into Python by way of the print function
 
 # Example 3.1
 # Reuse the message function in another script

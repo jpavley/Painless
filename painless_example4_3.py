@@ -1,17 +1,15 @@
 # Painless Python
-# A ridiculously deep dive into the the print function
+# A ridiculously deep dive into Python by way of the print function
 
 # Example 4.3
 # Figure out how to merge the data in in the spreadsheet with the chart
 
 # How comes the culmination of our all explorations! 
-# We will grab the data from the spreadsheet for the current month
-# and use it to create a chart in a markdown file named for the month
+# We will grab the data from the spreadsheet for the current month and use it to create a chart in a markdown file named for the month
 
-# The humble print function is still the heart of our solution
-# but we're combining it sophisticated tools from the Python community
+# The humble print function is still the heart of our solution but we're combining it sophisticated tools from the Python community
 
-# let's resuse the data cleaning and parsing functions
+# let's reuse the data cleaning and data parsing functions
 import painless_example4_2 as pe4_2
 
 # Some other imports we'll need
@@ -19,10 +17,10 @@ import datetime
 import pandas as pd # pip3 install pandas
 
 def main():
-    generate_presidental_birthday_briefing()
+    generate_presidential_birthday_briefing()
 
 # This is the function that does all the work
-def generate_presidental_birthday_briefing():
+def generate_presidential_birthday_briefing():
     # Get the current month from the system clock
     current_month_index = 12 # datetime.datetime.now().month
     # Get the file name based on the current month index
@@ -43,8 +41,7 @@ def generate_unique_file_name(current_month_index, version=0):
     file_name = f"pres_briefing_{current_month_name}_{current_month_year} v{version}.md"
     return file_name
 
-# This function grabs data from the CSV file for the current month
-# and returns it as a list of lists
+# This function grabs data from the CSV file for the current month and returns it as a list of lists
 def get_presidential_data_for_current_month(file_name, current_month_index):
     # make a data frame by reading all the data in form the CSV file
     df = pd.read_csv(file_name)
@@ -62,8 +59,7 @@ def get_month_from_int(month_int):
     # Return a DateTime for the given month index
     return datetime.datetime(current_year, month_int, 1)
 
-# This function creates a chart in a markdown file with all the data
-# from the spreadsheet for the current month
+# This function creates a chart in a markdown file with all the data from the spreadsheet for the current month
 def generate_chart(file_name, data, current_month_index):
     # Make all the parts we need for the title, subtitle, and column names
     title = "American Presidents Birthday Briefing"
@@ -90,7 +86,7 @@ def generate_chart(file_name, data, current_month_index):
 if __name__ == "__main__":
     main()
 
-# Monthly presidential brithday briefing todo list:
+# Monthly presidential birthday briefing todo list:
 # x Figure out how to create a markdown file that contains a chart
 # x Figure out how to grab data for particular month from a spreadsheet
 # x Figure out how to merge the data in in the spreadsheet with the chart

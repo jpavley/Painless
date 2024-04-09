@@ -1,5 +1,5 @@
 # Painless Python
-# A ridiculously deep dive into the the print function
+# A ridiculously deep dive into Python by way of the print function
 
 # Example 4.2
 # Figure out how to grab data for particular month from a spreadsheet
