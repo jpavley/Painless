@@ -90,9 +90,9 @@ if __name__ == "__main__":
 # x Figure out how to merge the data in in the spreadsheet with the chart
 # x Figure out how to automate the process of creating the chart in markdown
 
-# We could have started with OpenAI and skipped all the coding
-# But we actually needed some of the prior code to make the prompt work
-# And we needed to learn how to code to understand how to call the OpenAI API
+# We could have started with OpenAI and skipped most of the coding
+# But as impressive as OpenAI is, it's results are inconsistent
+# There is much more work to do to figure out how integrate the promise if AI into our work and lives
 
 
 
