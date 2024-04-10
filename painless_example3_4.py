@@ -4,7 +4,7 @@
 # Example 3.4
 # Print to a file
 
-def message(greeting, name, file_name=None):
+def message(greeting: str, name: str, file_name: str=None):
     if file_name:
          # There is a file_name
         file = open(file_name, "a") # Create and open file in append mode

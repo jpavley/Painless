@@ -26,13 +26,12 @@ def generate_presidential_birthday_briefing():
     # Get the file name based on the current month index
     file_name = generate_unique_file_name(current_month_index)
     # Get the president data for the current month
-    data = get_presidential_data_for_current_month("US-Presidents.csv", 
-                                                   current_month_index)
+    data = get_presidential_data_for_current_month("US-Presidents.csv", current_month_index)
     # Make the chart and write it to a file in markdown format
     generate_chart(file_name, data, current_month_index)
     
 # This function creates a unique file name which includes the month and year
-def generate_unique_file_name(current_month_index, version=0):
+def generate_unique_file_name(current_month_index: int, version: int=0):
     # Make the month name from the it's index number
     current_month_name = get_month_from_int(current_month_index).strftime("%B")
     # Make the year digits from the month
@@ -42,7 +41,7 @@ def generate_unique_file_name(current_month_index, version=0):
     return file_name
 
 # This function grabs data from the CSV file for the current month and returns it as a list of lists
-def get_presidential_data_for_current_month(file_name, current_month_index):
+def get_presidential_data_for_current_month(file_name: str, current_month_index: int):
     # make a data frame by reading all the data in form the CSV file
     df = pd.read_csv(file_name)
     # clean the date and parse it into a datetime object
@@ -53,14 +52,14 @@ def get_presidential_data_for_current_month(file_name, current_month_index):
     return data
 
 # This function returns a datetime object for a month given an integer
-def get_month_from_int(month_int):
+def get_month_from_int(month_int: int):
     # Start with the current DateTime as a default
     current_year = datetime.datetime.now().year
     # Return a DateTime for the given month index
     return datetime.datetime(current_year, month_int, 1)
 
 # This function creates a chart in a markdown file with all the data from the spreadsheet for the current month
-def generate_chart(file_name, data, current_month_index):
+def generate_chart(file_name: str, data, current_month_index: str):
     # Make all the parts we need for the title, subtitle, and column names
     title = "American Presidents Birthday Briefing"
     subtitle = "Updated as of"

@@ -17,7 +17,7 @@ def main():
 # What does the command "for" tell Python to do?
 # What does the command "in" tell Python to do?
     
-def message(name):
+def message(name: str):
     print(f"Hello, {name}!") # two arguments merged into one string
     
 # What else can we do with the with our message function?

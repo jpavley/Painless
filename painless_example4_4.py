@@ -68,7 +68,7 @@ def main():
 
 # This function removes the markdown code fencing from the OpenAI response
 # Code fencing: ```markdown and ```` that surrounds the markdown code
-def remove_markdown_code_fencing(file_name):
+def remove_markdown_code_fencing(file_name: str):
     # Open the file in read mode into a variable
     with open(file_name, 'r') as file:
         lines = file.readlines()

@@ -4,7 +4,7 @@
 def main():
     hello_fstring()
     
-# Example 2.1 started to sovle the hard coding problem
+# Example 2.1 started to solve the hard coding problem
 # But we have some problems...
 # - We have this extra space between the name and the exclamation point--that was unexpected
 # - We're passing 3 arguments to the print function: is there a limit? Who knows but probably!

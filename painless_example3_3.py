@@ -6,7 +6,7 @@ import datetime as dt # Import the DateTime module so we can tell time
 # A ridiculously deep dive into Python by way of the the print function
 
 # Refactor the message function to accept two arguments
-def message(greeting, name):
+def message(greeting: str, name: str):
         print(f"{greeting}, {name}!")
 
 def main():

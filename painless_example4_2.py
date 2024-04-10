@@ -52,7 +52,7 @@ def get_presidents():
         # for each president found print a string
         print(f"{president_names[i]} was born on {president_birthdays[i].strftime('%B %d, %Y')}. He weighed {president_weights[i]} lbs and was {president_heights[i]} ft. tall.")
 
-def clean_date(date_string):
+def clean_date(date_string: str):
     # Data problem #1: "Feb 22, 1732[a]"
     # The "[a]" prevents Pandas from recognizing the string as a date
     
@@ -64,7 +64,7 @@ def clean_date(date_string):
     # The re.sub() replaces the matched characters with an empty string--which is a way to delete them
     return cleaned_date
 
-def parse_dates(date):
+def parse_dates(date: str):
     # Data problem #2: Some date strings looks like "Feb 22, 1732" and some 
     # date strings look like "20-Nov-42"
     # We need to tell Pandas to parse both patterns
@@ -111,7 +111,7 @@ def parse_dates(date):
     # the equivalent of NaN (Not a Number) for datetime objects
     return pd.NaT
 
-def get_data_in_range(df, start_month, end_month):
+def get_data_in_range(df: pd.DataFrame, start_month: str, end_month: str):
     # Drop duplicate rows
     # Why do we have duplicate rows? Because some presidents have more than
     # one term or are appear in more than one row in the data set

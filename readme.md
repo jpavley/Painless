@@ -15,7 +15,26 @@ Project Version: 1.0
 - John Pavley, head of product & engineering for News Corp.
 - This is how I learned to code, 35 years ago.
 - Just dive in with a tutorial, follow along as best you can, ask a lot of
-questions, develop an intutive understanding before you a theoretical one.
+questions, develop an intuitive understanding before you a theoretical one.
+
+## Table of Contents
+
+- Example 1.1: Sending a message to something somewhere somehow
+- Example 1.2: Importing a script
+- Example 2.1: Printing a message to the terminal using a variable
+- Example 2.2: Printing a message to the terminal using a variable and the f-string technique
+- Example 2.3:
+- Example 2.4:
+- Example 3.1:
+- Example 3.2:
+- Example 3.3:
+- Example 3.4:
+- Example 4.1:
+- Example 4.2:
+- Example 4.3:
+- Example 4.4:
+
+
 
 ## Notes
 
