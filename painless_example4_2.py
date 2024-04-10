@@ -2,7 +2,7 @@
 # A ridiculously deep dive into Python by way of the print function
 
 # Example 4.2
-# Figure out how to grab data for particular month from a spreadsheet
+# Grabbing data from a spreadsheet
 
 # I found a great CSV file that contains the birth dates and other interesting facts about presidents
 

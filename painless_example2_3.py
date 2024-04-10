@@ -21,6 +21,7 @@ def hello_argument(name: str): # give a parameter a type hint
     print(f"Hello, {name}!") # Use the parameter as a variable
 
 # The hello_argument function can say hello to anyone!
+# What does "name: str" mean?
 
 if __name__ == "__main__":
     main()

@@ -3,7 +3,7 @@
 import painless_example2_4 as pe2
 
 # Example 3.2
-# Get input from the user
+# Getting input from the user
 
 def main():
     # Two ways to call the message function with user input:

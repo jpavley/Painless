@@ -16,7 +16,7 @@
 # - Figure out how to automate the process of creating the chart in markdown
 
 # Example 4.1
-# Figure out how to create a markdown file that displays a chart
+# Creating a markdown file
 
 def main():
     generate_chart()

@@ -2,7 +2,7 @@
 # A ridiculously deep dive into Python by way of the print function
 
 # Example 4.3
-# Figure out how to merge the data in in the spreadsheet with the chart
+# Merging the data in from a spreadsheet with a chart
 
 # How comes the culmination of our all explorations! 
 # We will grab the data from the spreadsheet for the current month and use it to create a chart in a markdown file named for the month

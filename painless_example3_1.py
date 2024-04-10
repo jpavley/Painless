@@ -2,7 +2,7 @@
 # A ridiculously deep dive into Python by way of the print function
 
 # Example 3.1
-# Reuse the message function in another script
+# Reusing a function from another script
 
 import painless_example2_4 as pe2 # Load the message script with an easy to type name
 

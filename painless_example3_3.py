@@ -1,9 +1,9 @@
 # Painless Python
-# A ridiculously deep dive into the print function
+# A ridiculously deep dive into Python by way of the print function
 import datetime as dt # Import the DateTime module so we can tell time
 
 # Example 3.3
-# A ridiculously deep dive into Python by way of the the print function
+# Changing a variable based on the time of day
 
 # Refactor the message function to accept two arguments
 def message(greeting: str, name: str):

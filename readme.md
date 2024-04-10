@@ -23,16 +23,16 @@ questions, develop an intuitive understanding before you a theoretical one.
 - Example 1.2: Importing a script
 - Example 2.1: Printing a message to the terminal using a variable
 - Example 2.2: Printing a message to the terminal using a variable and the f-string technique
-- Example 2.3:
-- Example 2.4:
-- Example 3.1:
-- Example 3.2:
-- Example 3.3:
-- Example 3.4:
-- Example 4.1:
-- Example 4.2:
-- Example 4.3:
-- Example 4.4:
+- Example 2.3: Passing an argument when a function is called
+- Example 2.4: Printing a message to the terminal using a list and a for loop
+- Example 3.1: Reusing a function from another script
+- Example 3.2: Getting input from the user
+- Example 3.3: Changing a variable based on the time of day
+- Example 3.4: Printing to a file
+- Example 4.1: Creating a markdown file
+- Example 4.2: Grabbing data from a spreadsheet
+- Example 4.3: Merging the data in from a spreadsheet with a chart
+- Example 4.4: Automate the solution with AI
 
 
 

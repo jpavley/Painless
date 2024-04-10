@@ -2,7 +2,7 @@
 # A ridiculously deep dive into Python by way of the print function
 
 # Example 3.4
-# Print to a file
+# Printing to a file
 
 def message(greeting: str, name: str, file_name: str=None):
     if file_name:
