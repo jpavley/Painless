@@ -32,9 +32,7 @@ questions, develop an intuitive understanding before you a theoretical one.
 - Example 4.1: Creating a markdown file
 - Example 4.2: Grabbing data from a spreadsheet
 - Example 4.3: Merging the data in from a spreadsheet with a chart
-- Example 4.4: Automate the solution with AI
-
-
+- Example 4.4: Automating the solution with AI
 
 ## Notes
 

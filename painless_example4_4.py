@@ -2,7 +2,7 @@
 # A ridiculously deep dive into Python by way of the print function
 
 # Example 4.4
-# Automate the solution with AI
+# Automating the solution with AI
 
 # Note that we had to learn how to code, learn the why Python works and its
 # syntax and libraries
