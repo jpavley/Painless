@@ -10,7 +10,7 @@
 
 def main():
     # for loop repeats itself for each element in a list
-    for name in ["John", "Paul", "George", "Ringo"]: 
+    for name in ["John", "Paul", "🤨", "こんにちは"]: 
         # the "name" variable's value is to the next element in the list each time the loop repeats
         message(name)
 

@@ -1,4 +1,5 @@
 # Painless Python
+
 # A ridiculously deep dive into Python by way of the print function
 
 # Example 1.1
@@ -18,11 +19,8 @@ def main(): # Define a function named "main"
 # Use a conditional statement to perform a test when running this script
 if __name__ == "__main__": # if name of the current module is "__main__"
     # The script is being run directly
-    print(__name__) # should be "__main__"
-    main() # Call the function named "main"
+    main() # Call the function named "main" inside the module named "__main__"
 else:
-    # The script is being imported by another script
-    print(__name__) # should be "painless_example1"
     pass # Don't do anything
 
 # What is a conditional statement?

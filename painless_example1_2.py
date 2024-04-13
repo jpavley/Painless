@@ -8,7 +8,7 @@
 import painless_example1_1 as pe1
 
 def main():
-    pass
+    pe1.main()
 
 if __name__ == "__main__":
     print(__name__)

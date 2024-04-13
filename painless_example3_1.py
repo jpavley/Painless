@@ -7,7 +7,7 @@
 import painless_example2_4 as pe2 # Load the message script with an easy to type name
 
 def main():
-    pe2.message(name="Frodo")
+    pe2.message(name = "Angel")
 
 
 # We reached inside the pe2 script (aka painless_example2_4.py) to call the message script

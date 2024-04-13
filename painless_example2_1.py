@@ -31,4 +31,4 @@ def hello_variable():
 if __name__ == "__main__":
     main()
 
-# Don't need the "else:" part of the coditional statement because we were just going to "pass" anyway
+# Don't need the "else:" part of the conditional statement because we were just going to "pass" anyway
