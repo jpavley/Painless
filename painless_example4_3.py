@@ -22,7 +22,7 @@ def main():
 # This is the function that does all the work
 def generate_presidential_birthday_briefing():
     # Get the current month from the system clock
-    current_month_index = 12 # datetime.datetime.now().month
+    current_month_index = datetime.datetime.now().month
     # Get the file name based on the current month index
     file_name = generate_unique_file_name(current_month_index)
     # Get the president data for the current month

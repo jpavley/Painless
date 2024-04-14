@@ -6,6 +6,7 @@ A ridiculously deep dive into Python by way of the print function
 
 Primary Author: <jpavley@newscorp.com>
 Project Version: 1.1
+Code: <https://github.com/jpavley/Painless>
 
 ## Introduction
 

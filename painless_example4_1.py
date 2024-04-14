@@ -12,7 +12,7 @@
 # Here's our todo list:
 # - Figure out how to create a markdown file that contains a chart
 # - Figure out how to grab data for particular month from a spreadsheet
-# - Figure out how to merge the data in in the spreadsheet with the chart
+# - Figure out how to merge the data in the spreadsheet with the chart
 # - Figure out how to automate the process of creating the chart in markdown
 
 # Example 4.1
